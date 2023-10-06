@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/YosrJoulek_TP1_SOA_SW" xmlns:tns="http://www.example.org/YosrJoulek_TP1_SOA_SW" elementFormDefault="qualified">
+
+    <complexType name="cinema">
+    	<sequence>
+    		<element name="film" type="tns:Film"></element>
+    		<element name="producteur" type="tns:producteur"></element>
+    	</sequence>
+    </complexType>
+    
+    <complexType name="Film">
+    	<sequence>
+    		<element name="titre" type="string"></element>
+    		<element name="annee" type="string"></element>
+    		<element name="realisateur" type="string"></element>
+    	</sequence>
+    	<attribute name="id" type="string"></attribute>
+    	<attribute name="type" type="string"></attribute>
+    </complexType>
+
+    <complexType name="producteur">
+    	<sequence>
+    		<element name="nom" type="string"></element>
+    		<element name="film" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>
